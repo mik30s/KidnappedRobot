@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "kidnapped-robot",
+  "private_key_id": "a7b48b7b0b1801288c01f52926409008470fa422",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDV/LbE8kkytmV3\nXkv+hgaLva9hhkuNUemcI/GkcfvYaqNKZ4SWYqHH7ZKLu/LDbV61C96h26RLmLl9\nPp04dlS/xs6L81YxJXZkDb7BrU91VVhG7IsGciUx5pkvwYnWwcqCrJ+6lEhY4OCU\nyyxK/kttjfP5epsigKtifS+vhpsi4N+gHWu5BJEQEp+64nqQQTqvsMuBZcAB6YeR\nICPWkJgjkSHbY/r33B72n7zFVbOs5I5JS5hIQxPPS60AZS7/EdqZlpxeDvGv7dSG\nYkJwyEnFAHIHvR6AmLDMCsX5r9IrrYDLzWsX8cKKgv4Gpsev5S3gzKKHeGvfyQh0\nMa0DoD0fAgMBAAECggEAYUh3RRlLStleTsLZdLi00CHn0kQOJAzZ0kkLCfJiBxUP\n8HsYbZAgsbZhmdJT/yHBXTisudQToOSpa3WkX294fwlgjIKPrF82MC2JjB6BEbw/\nmlrep4sMOt/1w57OzgojSX42TcotC+8MWsj1dZCfdQqEoOZrEegCQo/cNoXREKzq\n/g3EkYlS+KJbmNtc6/N2fby6FeYjExPndm3n5y9yVxmdaLzXowtZ9X9FSV4V/lXJ\nPB3xy5/g7cD9689klrNqWGeLtYgP7gcrOANI8xBcosCpceXM03BuY6j8U46RnOmt\n45LdZnMTrKyM2RFkFiz4xIjmJbLm8xG/PZgyQcVyyQKBgQD4TyhA+4kqoHSIFXET\nlOfWt37i/3BRHv4mBE81Tvh1prKNZCcQ1JbrblMpKYTUbD2d/kWaN7+LH/9EVcAQ\nVF3mBaarFXb6fhnwJdtDsEiytYAIsRcKsCwlNH9v4l2lTzElUmE9KTsdMXpywcV3\nD2gD4DCeVRhCSneYkDsNAXT0VwKBgQDcnWrXGeaKVr2GYFLNl2N9uihP8ZLa7VMk\n8BmbHsVWh79ffwZMpwpNQ1YTvifbNwN4vOTnmGgIvvRBerPB6LVdNfhADCmT6T6M\nk4JRJwAj8hnSxdESH60Yd/6tjylVyTlPU7sSuPyYBgA1m7PA55+HbfPEUTrRyvY2\nDJnGWfVAeQKBgBb/jeTm5z9xeRmZks2Tfx2eBTyVGBwLWNLAl22CkPSkqej6m7ut\nVQUdRMqNM+ZQ2Cwn/t5Xx3/lSMlVf+KDTeceIt+5rzloMJLTjsloLHOQ5/jmHhI5\nWv1fLWZ5et7yxMSGKsd1aCo+CO9UDywF20Zwn1Aq5YJOT2FsCmwb9G8lAoGBAJWr\nvoY8LioAewglZUfRw0/S8fJ6o/UfOV8//T89+wefhPgWx4FNejG80zMFuSiCBDrv\nfCSbQ0lbs36Q7k9Jv3GDYe6h0btlbGgW0zyXRwMcBuT2C8dN8jM9hWzeSV7H67ej\nyLEFC2lf+Nhlz+e5vIM210CDE3KtTaiRl+n3semRAoGBAPUksv09CEXiauiNh4fJ\ngkSn3gvnZtyHDPTzsIppKoWI8wNdhUKHlhN5sXdc9CUliRglvWUL9FXOXnRAxVnR\n3ngS2h+GaEY86aDSUNc9MVEBKSECSDCvMspZtRMbr7Gr0qgUTtWMIo+5EvRoj+eQ\nl7rT4kmInq2rw9fVbXpwW/BA\n-----END PRIVATE KEY-----\n",
+  "client_email": "tweet-store@kidnapped-robot.iam.gserviceaccount.com",
+  "client_id": "107008708940840338918",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/tweet-store%40kidnapped-robot.iam.gserviceaccount.com"
+}
