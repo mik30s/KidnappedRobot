@@ -9,16 +9,14 @@ ReplyDict = Dict[str, Dict[str, str]]
 
 class KidnappedTweet:
     def __init__(self):
+        os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = os.path.abspath('./cloud_store.json')
         self.api = twitter.Api(
             consumer_key='HjmuHu5jECTofRmd1pHs8NeHg',
             consumer_secret='ZaEKo2smSV58e9nopzD8GCgVmayeOjF343gRXnJv9nwh0gmPDx',
             access_token_key='1051534889307258880-TOpjUkMZY1MxQinKP0Qz2xIZRtwaBT',
             access_token_secret='L6DKU3aRKAvdZ33ionzDE4TWwvfo4v3YVo07KLiAyUWLW'
         )
-        self.redis_db = redis.Redis(
-            host='locahost',
-            port='3666'
-        )
+        self.datastore_client = datastore.Client()
         self.tweetThread = None
         self.watchThread = None
         self.tweetIds = []
@@ -46,11 +44,24 @@ class KidnappedTweet:
         return comments
 
     def __store_replies(self, reply:ReplyDict):
-        self.redis_db.set(reply['record_id'], {
-            'user_id':reply['user_id'],
-            'user_screen_name': reply['user_screen_name'],
-            'text': reply['text']
-        })
+        # The kind for the new entity
+        kind = 'TweetReply'
+        # The name/ID for the new entity
+        name = reply['record_id']
+        # The Cloud Datastore key for the new entity
+        task_key = self.datastore_client.key(kind, name)
+
+        # Prepares the new entity
+        task = datastore.Entity(key=task_key)
+        task['user_id'] = reply['user_id']
+        task['user_screen_name'] = reply['user_screen_name']
+        task['text'] = reply['text']
+
+        # Saves the entity
+        self.datastore_client.put(task)
+
+        print('Saved {}: {}'.format(task.key.name, task))
+
 
     def tweetCallback(self):
         # make a tweet and get id
@@ -61,7 +72,7 @@ class KidnappedTweet:
             ret = self.make_tweet('Where am I? ({0})'.format(i), img_fp)
             print("{0} tweeted: {1}, {2}".format(ret.user.name, ret.text, ret.id))
             self.tweetIds.append(ret.id)
-            time.sleep(60)
+            time.sleep(10)
             i = i+1
     
     def readCommentsCallback(self):    
@@ -73,7 +84,7 @@ class KidnappedTweet:
                 if len(comments) > 0:
                     for comment in comments:
                         self.__store_replies(comment)
-            time.sleep(80)
+            time.sleep(10)
             
 
     def start(self):  
@@ -87,7 +98,7 @@ class KidnappedTweet:
     def end(self):
         self.tweetThread.join()
         self.commentsThread.join()
-        print('end commenting...')           
+        print('end commenting...')              
    
         
 if __name__ == '__main__': 
